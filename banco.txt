@@ -1,0 +1,6 @@
+create database login;
+use login;
+create table usuarios(id int not null auto_increment primary key, usuario varchar(250) not null, senha varchar(255) not null);
+create table cliente(id int not null auto_increment primary key, nome varchar(255) not null, dataNascimento varchar(255) not null, cpf varchar(255) not null, rg varchar(255) not null, telefone varchar(255) not null);
+insert into usuarios(usuario, senha) values('thi', '123'),('dani', '456'), ('rafa', '789');
+alter user 'root'@'localhost' identified with mysql_native_password by 'senha';
